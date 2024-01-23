@@ -1,0 +1,29 @@
+superduperdb.backends.local package
+===================================
+
+Submodules
+----------
+
+superduperdb.backends.local.artifacts module
+--------------------------------------------
+
+.. automodule:: superduperdb.backends.local.artifacts
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+superduperdb.backends.local.compute module
+------------------------------------------
+
+.. automodule:: superduperdb.backends.local.compute
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: superduperdb.backends.local
+   :members:
+   :undoc-members:
+   :show-inheritance:

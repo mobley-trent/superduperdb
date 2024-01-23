@@ -1,0 +1,53 @@
+superduperdb.ext.llm package
+============================
+
+Submodules
+----------
+
+superduperdb.ext.llm.base module
+--------------------------------
+
+.. automodule:: superduperdb.ext.llm.base
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+superduperdb.ext.llm.model module
+---------------------------------
+
+.. automodule:: superduperdb.ext.llm.model
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+superduperdb.ext.llm.openai module
+----------------------------------
+
+.. automodule:: superduperdb.ext.llm.openai
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+superduperdb.ext.llm.utils module
+---------------------------------
+
+.. automodule:: superduperdb.ext.llm.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+superduperdb.ext.llm.vllm module
+--------------------------------
+
+.. automodule:: superduperdb.ext.llm.vllm
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: superduperdb.ext.llm
+   :members:
+   :undoc-members:
+   :show-inheritance:

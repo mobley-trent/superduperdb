@@ -1,0 +1,21 @@
+superduperdb.backends.dask package
+==================================
+
+Submodules
+----------
+
+superduperdb.backends.dask.compute module
+-----------------------------------------
+
+.. automodule:: superduperdb.backends.dask.compute
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: superduperdb.backends.dask
+   :members:
+   :undoc-members:
+   :show-inheritance:

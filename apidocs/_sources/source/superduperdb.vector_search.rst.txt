@@ -1,0 +1,69 @@
+superduperdb.vector\_search package
+===================================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   superduperdb.vector_search.server
+
+Submodules
+----------
+
+superduperdb.vector\_search.atlas module
+----------------------------------------
+
+.. automodule:: superduperdb.vector_search.atlas
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+superduperdb.vector\_search.base module
+---------------------------------------
+
+.. automodule:: superduperdb.vector_search.base
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+superduperdb.vector\_search.in\_memory module
+---------------------------------------------
+
+.. automodule:: superduperdb.vector_search.in_memory
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+superduperdb.vector\_search.interface module
+--------------------------------------------
+
+.. automodule:: superduperdb.vector_search.interface
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+superduperdb.vector\_search.lance module
+----------------------------------------
+
+.. automodule:: superduperdb.vector_search.lance
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+superduperdb.vector\_search.update\_tasks module
+------------------------------------------------
+
+.. automodule:: superduperdb.vector_search.update_tasks
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: superduperdb.vector_search
+   :members:
+   :undoc-members:
+   :show-inheritance:

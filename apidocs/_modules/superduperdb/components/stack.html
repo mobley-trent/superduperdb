@@ -1,0 +1,580 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../../../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
+
+    <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
+        <title>superduperdb.components.stack - Python documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?v=36a5483c" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #eeffcc;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../../index.html"><div class="brand">Python  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../../../_static/SuperDuperDB_logo.png" alt="Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Python  documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../source/modules.html">superduperdb</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of superduperdb</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../source/superduperdb.html">superduperdb package</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of superduperdb package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../source/superduperdb.backends.html">superduperdb.backends package</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of superduperdb.backends package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/superduperdb.backends.base.html">superduperdb.backends.base package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/superduperdb.backends.dask.html">superduperdb.backends.dask package</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../../source/superduperdb.backends.ibis.html">superduperdb.backends.ibis package</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of superduperdb.backends.ibis package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../source/superduperdb.backends.ibis.cdc.html">superduperdb.backends.ibis.cdc package</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/superduperdb.backends.local.html">superduperdb.backends.local package</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../../source/superduperdb.backends.mongodb.html">superduperdb.backends.mongodb package</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of superduperdb.backends.mongodb package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../source/superduperdb.backends.mongodb.cdc.html">superduperdb.backends.mongodb.cdc package</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/superduperdb.backends.ray.html">superduperdb.backends.ray package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/superduperdb.base.html">superduperdb.base package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/superduperdb.cdc.html">superduperdb.cdc package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/superduperdb.cli.html">superduperdb.cli package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/superduperdb.components.html">superduperdb.components package</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../source/superduperdb.ext.html">superduperdb.ext package</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of superduperdb.ext package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/superduperdb.ext.anthropic.html">superduperdb.ext.anthropic package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/superduperdb.ext.cohere.html">superduperdb.ext.cohere package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/superduperdb.ext.jina.html">superduperdb.ext.jina package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/superduperdb.ext.llm.html">superduperdb.ext.llm package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/superduperdb.ext.numpy.html">superduperdb.ext.numpy package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/superduperdb.ext.openai.html">superduperdb.ext.openai package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/superduperdb.ext.pillow.html">superduperdb.ext.pillow package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/superduperdb.ext.sentence_transformers.html">superduperdb.ext.sentence_transformers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/superduperdb.ext.sklearn.html">superduperdb.ext.sklearn package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/superduperdb.ext.torch.html">superduperdb.ext.torch package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/superduperdb.ext.transformers.html">superduperdb.ext.transformers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/superduperdb.ext.unstructured.html">superduperdb.ext.unstructured package</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../source/superduperdb.misc.html">superduperdb.misc package</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of superduperdb.misc package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/superduperdb.misc.runnable.html">superduperdb.misc.runnable package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/superduperdb.server.html">superduperdb.server package</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../source/superduperdb.vector_search.html">superduperdb.vector_search package</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of superduperdb.vector_search package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/superduperdb.vector_search.server.html">superduperdb.vector_search.server package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <h1>Source code for superduperdb.components.stack</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">dataclasses</span> <span class="k">as</span> <span class="nn">dc</span>
+<span class="kn">import</span> <span class="nn">importlib</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">tarfile</span>
+<span class="kn">import</span> <span class="nn">typing</span> <span class="k">as</span> <span class="nn">t</span>
+
+<span class="kn">from</span> <span class="nn">superduperdb.backends.local.artifacts</span> <span class="kn">import</span> <span class="n">FileSystemArtifactStore</span>
+<span class="kn">from</span> <span class="nn">superduperdb.base.serializable</span> <span class="kn">import</span> <span class="n">Serializable</span>
+<span class="kn">from</span> <span class="nn">superduperdb.components.serializer</span> <span class="kn">import</span> <span class="n">serializers</span>
+<span class="kn">from</span> <span class="nn">superduperdb.misc.annotations</span> <span class="kn">import</span> <span class="n">public_api</span>
+<span class="kn">from</span> <span class="nn">superduperdb.misc.download</span> <span class="kn">import</span> <span class="n">Fetcher</span>
+
+<span class="kn">from</span> <span class="nn">.component</span> <span class="kn">import</span> <span class="n">Component</span>
+
+<span class="k">if</span> <span class="n">t</span><span class="o">.</span><span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">superduperdb.base.datalayer</span> <span class="kn">import</span> <span class="n">Datalayer</span>
+
+
+<span class="n">ARTIFACTS</span> <span class="o">=</span> <span class="s1">&#39;artifacts&#39;</span>
+<span class="n">_STACK_JSON_FILE</span> <span class="o">=</span> <span class="s1">&#39;stack.json&#39;</span>
+
+
+<div class="viewcode-block" id="Stack">
+<a class="viewcode-back" href="../../../source/superduperdb.components.html#superduperdb.components.stack.Stack">[docs]</a>
+<span class="nd">@public_api</span><span class="p">(</span><span class="n">stability</span><span class="o">=</span><span class="s1">&#39;alpha&#39;</span><span class="p">)</span>
+<span class="nd">@dc</span><span class="o">.</span><span class="n">dataclass</span><span class="p">(</span><span class="n">kw_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">Stack</span><span class="p">(</span><span class="n">Component</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A placeholder to hold list of components under a namespace and packages them as</span>
+<span class="sd">    a tarball</span>
+<span class="sd">    This tarball can be retrieved back to a `Stack` instance with ``load`` method.</span>
+<span class="sd">    {component_parameters}</span>
+<span class="sd">    :param components: List of components to stack together and add to database.</span>
+<span class="sd">    :param version: Version number of the model(?)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">__doct__</span> <span class="o">=</span> <span class="vm">__doc__</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">component_parameters</span><span class="o">=</span><span class="n">Component</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+
+    <span class="n">type_id</span><span class="p">:</span> <span class="n">t</span><span class="o">.</span><span class="n">ClassVar</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;stack&#39;</span>
+
+    <span class="n">components</span><span class="p">:</span> <span class="n">t</span><span class="o">.</span><span class="n">Sequence</span><span class="p">[</span><span class="n">Component</span><span class="p">]</span> <span class="o">=</span> <span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">child_components</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">((</span><span class="s1">&#39;components&#39;</span><span class="p">,</span> <span class="s1">&#39;component_list&#39;</span><span class="p">),)</span>
+
+    <span class="k">def</span> <span class="nf">_load_components</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_component_type_store</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_component_store</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">components</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">component</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">components</span><span class="p">:</span>
+                <span class="n">type_id</span> <span class="o">=</span> <span class="n">component</span><span class="o">.</span><span class="n">type_id</span>
+                <span class="n">identifier</span> <span class="o">=</span> <span class="n">component</span><span class="o">.</span><span class="n">identifier</span>
+
+                <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_component_type_store</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">type_id</span><span class="p">,</span> <span class="kc">None</span><span class="p">):</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_component_type_store</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">type_id</span><span class="p">:</span> <span class="p">[</span><span class="n">component</span><span class="p">]})</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_component_type_store</span><span class="p">[</span><span class="n">type_id</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_component_type_store</span><span class="p">[</span>
+                        <span class="n">type_id</span>
+                    <span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">component</span><span class="p">)</span>
+
+                <span class="bp">self</span><span class="o">.</span><span class="n">_component_store</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">identifier</span><span class="p">:</span> <span class="n">component</span><span class="p">})</span>
+
+<div class="viewcode-block" id="Stack.to_tarball">
+<a class="viewcode-back" href="../../../source/superduperdb.components.html#superduperdb.components.stack.Stack.to_tarball">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">to_tarball</span><span class="p">(</span><span class="n">folder_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create a tarball (compressed archive) from a folder.</span>
+
+<span class="sd">        :param folder_path: Path to the folder to be archived.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">folder_path</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;.tar.gz&#39;</span>
+        <span class="k">with</span> <span class="n">tarfile</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;w:gz&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">tar</span><span class="p">:</span>
+            <span class="n">tar</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">folder_path</span><span class="p">,</span> <span class="n">arcname</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">folder_path</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="Stack.from_tarball">
+<a class="viewcode-back" href="../../../source/superduperdb.components.html#superduperdb.components.stack.Stack.from_tarball">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">from_tarball</span><span class="p">(</span><span class="n">tarball_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Extract the contents of stack tarball</span>
+
+<span class="sd">        :param tarball_path: Path to the tarball file.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">extract_path</span> <span class="o">=</span> <span class="n">tarball_path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.tar.gz&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">with</span> <span class="n">tarfile</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">tarball_path</span><span class="p">,</span> <span class="s2">&quot;r:gz&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">tar</span><span class="p">:</span>
+            <span class="n">tar</span><span class="o">.</span><span class="n">extractall</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">extract_path</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">extract_path</span></div>
+
+
+<div class="viewcode-block" id="Stack.save">
+<a class="viewcode-back" href="../../../source/superduperdb.components.html#superduperdb.components.stack.Stack.save">[docs]</a>
+    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">db</span><span class="p">:</span> <span class="s1">&#39;Datalayer&#39;</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Save method takes a stack name and exports ``self``</span>
+<span class="sd">        to tarball by serializing ``Stack`` along with storing</span>
+<span class="sd">        artifacts to filesystem</span>
+
+<span class="sd">        The json serialized file and artifacts folders are packaged by tar</span>
+<span class="sd">        ball.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">fs_store</span> <span class="o">=</span> <span class="n">FileSystemArtifactStore</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">ARTIFACTS</span><span class="p">))</span>
+
+        <span class="n">serialized</span><span class="p">,</span> <span class="n">artifacts</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">serialized</span>
+        <span class="n">artifact_info</span> <span class="o">=</span> <span class="n">fs_store</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">artifacts</span><span class="p">)</span>
+        <span class="n">serialized</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">artifact_store</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">serialized</span><span class="p">,</span> <span class="n">artifact_info</span><span class="p">)</span>
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">_STACK_JSON_FILE</span><span class="p">),</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">outfile</span><span class="p">:</span>
+            <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">serialized</span><span class="p">,</span> <span class="n">outfile</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">to_tarball</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Stack.load">
+<a class="viewcode-back" href="../../../source/superduperdb.components.html#superduperdb.components.stack.Stack.load">[docs]</a>
+    <span class="k">def</span> <span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Load method loads the stack tarball, loads the `stack.json` and `artifacts`.</span>
+<span class="sd">        It binds the loaded stack object to ``self``</span>
+
+<span class="sd">        Stack should be empty for it to load the given tarball else it will</span>
+<span class="sd">        override the exisitng artibutes.</span>
+
+<span class="sd">        :param: Path to tarball which contains artifacts and stack json.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Extract tarball</span>
+        <span class="n">extracted_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">from_tarball</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s1">&#39;.tar.gz&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Load stack.josn file</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">extracted_path</span><span class="p">,</span> <span class="n">_STACK_JSON_FILE</span><span class="p">),</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">inputfile</span><span class="p">:</span>
+            <span class="n">serialized</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">inputfile</span><span class="p">)</span>
+
+        <span class="c1"># Load the stack</span>
+        <span class="n">fs_store</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">extracted_path</span><span class="p">,</span> <span class="n">ARTIFACTS</span><span class="p">)</span>
+        <span class="n">info</span> <span class="o">=</span> <span class="n">fs_store</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">serialized</span><span class="p">,</span> <span class="n">lazy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">loaded_stack</span> <span class="o">=</span> <span class="n">Serializable</span><span class="o">.</span><span class="n">deserialize</span><span class="p">(</span><span class="n">info</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">identifier</span> <span class="o">=</span> <span class="n">loaded_stack</span><span class="o">.</span><span class="n">identifier</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">components</span> <span class="o">=</span> <span class="n">loaded_stack</span><span class="o">.</span><span class="n">components</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_load_components</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="Stack.get">
+<a class="viewcode-back" href="../../../source/superduperdb.components.html#superduperdb.components.stack.Stack.get">[docs]</a>
+    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">identifier</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_component_store</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">identifier</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Stack.get_component_type">
+<a class="viewcode-back" href="../../../source/superduperdb.components.html#superduperdb.components.stack.Stack.get_component_type">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_component_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">type_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_component_type_store</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">type_id</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Stack.from_dict">
+<a class="viewcode-back" href="../../../source/superduperdb.components.html#superduperdb.components.stack.Stack.from_dict">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">from_dict</span><span class="p">(</span><span class="n">d</span><span class="p">:</span> <span class="n">t</span><span class="o">.</span><span class="n">Dict</span><span class="p">,</span> <span class="n">db</span><span class="p">:</span> <span class="n">t</span><span class="o">.</span><span class="n">Optional</span><span class="p">[</span><span class="s1">&#39;Datalayer&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Load a stack from a dictionary.</span>
+
+<span class="sd">        :param d: Dictionary containing the stack definition.</span>
+<span class="sd">        :param db: Datalayer instance to use for loading artifacts.</span>
+
+<span class="sd">        The dictionary should look something like below.</span>
+<span class="sd">        1. An ``identifier`` field</span>
+<span class="sd">        2. An ``artifact`` field containing a list of artifacts including the</span>
+<span class="sd">           serializer used</span>
+<span class="sd">        3. A ``components`` field containing a list of component definitions.</span>
+<span class="sd">           These definitions can recursively refer to other components or artifacts,</span>
+<span class="sd">           resp. ``$components.&lt;identifier&gt;`` or ``$artifacts[&lt;index&gt;]``.</span>
+
+<span class="sd">        &gt;&gt;&gt; d = {</span>
+<span class="sd">        ...    &#39;identifier&#39;: &#39;my_stack&#39;,</span>
+<span class="sd">        ...    &#39;artifacts&#39;: [</span>
+<span class="sd">        ...        {</span>
+<span class="sd">        ...            &#39;serializer&#39;: &#39;pickle&#39;,</span>
+<span class="sd">        ...            &#39;bytes&#39;: bytes_,</span>
+<span class="sd">        ...        },</span>
+<span class="sd">        ...    ],</span>
+<span class="sd">        ...    &#39;components&#39;: [</span>
+<span class="sd">        ...        {&#39;module&#39;: &#39;superduperdb.ext.pillow&#39;, &#39;variable&#39;: &#39;pil_image&#39;},</span>
+<span class="sd">        ...        {</span>
+<span class="sd">        ...            &#39;module&#39;: &#39;superduperdb.components.model&#39;,</span>
+<span class="sd">        ...            &#39;cls&#39;: &#39;Model&#39;,</span>
+<span class="sd">        ...            &#39;dict&#39;: {</span>
+<span class="sd">        ...                &#39;identifier&#39;: &#39;my_model&#39;,</span>
+<span class="sd">        ...                &#39;object&#39;: &#39;$artifacts[0]&#39;,</span>
+<span class="sd">        ...                &#39;encoder&#39;: &#39;$components.pil_image&#39;,</span>
+<span class="sd">        ...            },</span>
+<span class="sd">        ...        },</span>
+<span class="sd">        ...    ],</span>
+<span class="sd">        ... }</span>
+<span class="sd">        &gt;&gt;&gt; s = Stack.from_dict(d)</span>
+<span class="sd">        &gt;&gt;&gt; isinstance(s, Stack)</span>
+<span class="sd">        True</span>
+<span class="sd">        &gt;&gt;&gt; isinstance(s.components[1], Model)</span>
+<span class="sd">        True</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">_load_stack</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">db</span><span class="p">)</span></div>
+</div>
+
+
+
+<span class="k">def</span> <span class="nf">_find_variables</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
+    <span class="k">if</span> <span class="s1">&#39;dict&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">r</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[]</span>
+    <span class="n">variables</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">r</span><span class="p">[</span><span class="s1">&#39;dict&#39;</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;dict&#39;</span><span class="p">][</span><span class="n">k</span><span class="p">],</span> <span class="nb">str</span><span class="p">)</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="s1">&#39;dict&#39;</span><span class="p">][</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;$components&#39;</span><span class="p">):</span>
+            <span class="n">variables</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;dict&#39;</span><span class="p">][</span><span class="n">k</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">variables</span>
+
+
+<span class="k">def</span> <span class="nf">_find_leaves</span><span class="p">(</span><span class="n">components</span><span class="p">,</span> <span class="n">existing</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">contains_new_variable</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">set</span><span class="p">(</span><span class="n">_find_variables</span><span class="p">(</span><span class="n">r</span><span class="p">))</span><span class="o">.</span><span class="n">issubset</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">existing</span><span class="p">)):</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="kc">True</span>
+
+    <span class="n">out</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">components</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">contains_new_variable</span><span class="p">(</span><span class="n">c</span><span class="p">)]</span>
+    <span class="n">components</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">components</span> <span class="k">if</span> <span class="n">contains_new_variable</span><span class="p">(</span><span class="n">c</span><span class="p">)]</span>
+    <span class="k">return</span> <span class="n">out</span><span class="p">,</span> <span class="n">components</span>
+
+
+<span class="k">def</span> <span class="nf">_load_artifact</span><span class="p">(</span><span class="n">variable</span><span class="p">,</span> <span class="n">artifacts</span><span class="p">,</span> <span class="n">serializers</span><span class="p">,</span> <span class="nb">dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fetcher</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">serializer</span> <span class="o">=</span> <span class="n">serializers</span><span class="p">[</span><span class="n">artifacts</span><span class="p">[</span><span class="n">variable</span><span class="p">][</span><span class="s1">&#39;serializer&#39;</span><span class="p">]]</span>
+    <span class="k">if</span> <span class="s1">&#39;bytes&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">artifacts</span><span class="p">[</span><span class="n">variable</span><span class="p">]:</span>
+        <span class="n">fetcher</span> <span class="o">=</span> <span class="n">fetcher</span> <span class="ow">or</span> <span class="n">Fetcher</span><span class="p">()</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">uri</span> <span class="o">=</span> <span class="n">artifacts</span><span class="p">[</span><span class="n">variable</span><span class="p">][</span><span class="s1">&#39;uri&#39;</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;No uri or bytes found for artifact </span><span class="si">{</span><span class="n">variable</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+        <span class="n">artifacts</span><span class="p">[</span><span class="n">variable</span><span class="p">][</span><span class="s1">&#39;bytes&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">fetcher</span><span class="p">(</span><span class="n">uri</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">serializer</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">artifacts</span><span class="p">[</span><span class="n">variable</span><span class="p">][</span><span class="s1">&#39;bytes&#39;</span><span class="p">])</span>
+
+
+<span class="k">def</span> <span class="nf">_build_component</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">artifacts</span><span class="p">,</span> <span class="n">components</span><span class="p">,</span> <span class="n">serializers</span><span class="p">):</span>
+    <span class="n">module</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;module&#39;</span><span class="p">])</span>
+    <span class="k">if</span> <span class="s1">&#39;dict&#39;</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+        <span class="n">defn</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="s1">&#39;dict&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">defn</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">defn</span><span class="p">[</span><span class="n">k</span><span class="p">],</span> <span class="nb">str</span><span class="p">)</span> <span class="ow">and</span> <span class="n">defn</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;$&#39;</span><span class="p">):</span>
+                <span class="k">if</span> <span class="s1">&#39;.&#39;</span> <span class="ow">in</span> <span class="n">defn</span><span class="p">[</span><span class="n">k</span><span class="p">]:</span>
+                    <span class="k">assert</span> <span class="n">defn</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;$components.&#39;</span><span class="p">)</span>
+                    <span class="nb">type</span><span class="p">,</span> <span class="n">variable</span> <span class="o">=</span> <span class="n">defn</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s1">&#39;\$artifacts\[(\d+)\]&#39;</span><span class="p">,</span> <span class="n">defn</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
+                    <span class="k">assert</span> <span class="p">(</span>
+                        <span class="k">match</span>
+                    <span class="p">),</span> <span class="s1">&#39;Unknown variable type </span><span class="si">{defn[k]}</span><span class="s1">, expected $artifacts[&lt;index&gt;]&#39;</span>
+                    <span class="nb">type</span> <span class="o">=</span> <span class="s1">&#39;artifacts&#39;</span>
+                    <span class="n">variable</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">groups</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+
+                <span class="k">if</span> <span class="nb">type</span> <span class="o">==</span> <span class="s1">&#39;artifacts&#39;</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="s1">&#39;artifact&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">artifacts</span><span class="p">[</span><span class="n">variable</span><span class="p">]:</span>
+                        <span class="n">artifacts</span><span class="p">[</span><span class="n">variable</span><span class="p">][</span><span class="s1">&#39;artifact&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_load_artifact</span><span class="p">(</span>
+                            <span class="n">variable</span><span class="p">,</span> <span class="n">artifacts</span><span class="p">,</span> <span class="n">serializers</span><span class="o">=</span><span class="n">serializers</span>
+                        <span class="p">)</span>
+                    <span class="n">defn</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">artifacts</span><span class="p">[</span><span class="n">variable</span><span class="p">][</span><span class="s1">&#39;artifact&#39;</span><span class="p">]</span>
+                <span class="k">elif</span> <span class="nb">type</span> <span class="o">==</span> <span class="s1">&#39;components&#39;</span><span class="p">:</span>
+                    <span class="n">defn</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">c</span><span class="o">.</span><span class="n">identifier</span><span class="p">:</span> <span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">components</span><span class="p">}[</span><span class="n">variable</span><span class="p">]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Unknown variable type </span><span class="si">{</span><span class="nb">type</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+        <span class="n">component_cls</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">d</span><span class="p">[</span><span class="s1">&#39;cls&#39;</span><span class="p">])</span>
+        <span class="n">built</span> <span class="o">=</span> <span class="n">component_cls</span><span class="p">(</span><span class="o">**</span><span class="n">defn</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">built</span><span class="o">.</span><span class="n">type_id</span> <span class="o">==</span> <span class="s1">&#39;serializer&#39;</span><span class="p">:</span>
+            <span class="n">serializers</span><span class="p">[</span><span class="n">built</span><span class="o">.</span><span class="n">identifier</span><span class="p">]</span> <span class="o">=</span> <span class="n">built</span><span class="o">.</span><span class="n">object</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">built</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">d</span><span class="p">[</span><span class="s1">&#39;variable&#39;</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">built</span>
+
+
+<span class="k">def</span> <span class="nf">_load_stack</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">db</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">components</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">to_build</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="s1">&#39;components&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">current</span><span class="p">,</span> <span class="n">to_build</span> <span class="o">=</span> <span class="n">_find_leaves</span><span class="p">(</span>
+            <span class="n">to_build</span><span class="p">,</span>
+            <span class="n">existing</span><span class="o">=</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;$components.</span><span class="si">{</span><span class="n">c</span><span class="o">.</span><span class="n">identifier</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">components</span><span class="p">],</span>
+        <span class="p">)</span>
+        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">current</span><span class="p">:</span>
+            <span class="n">built</span> <span class="o">=</span> <span class="n">_build_component</span><span class="p">(</span>
+                <span class="n">c</span><span class="p">,</span>
+                <span class="n">artifacts</span><span class="o">=</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;artifacts&#39;</span><span class="p">],</span>
+                <span class="n">components</span><span class="o">=</span><span class="n">components</span><span class="p">,</span>
+                <span class="n">serializers</span><span class="o">=</span><span class="n">db</span><span class="o">.</span><span class="n">serializers</span> <span class="k">if</span> <span class="n">db</span> <span class="k">else</span> <span class="n">serializers</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">components</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">built</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">to_build</span><span class="p">:</span>
+            <span class="k">break</span>
+    <span class="k">return</span> <span class="n">Stack</span><span class="p">(</span><span class="n">identifier</span><span class="o">=</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;identifier&#39;</span><span class="p">],</span> <span class="n">components</span><span class="o">=</span><span class="n">components</span><span class="p">)</span>
+</pre></div>
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; SuperDuperDB Inc., opensource@superduperdb.com
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/scripts/furo.js?v=32e29ea5"></script>
+    </body>
+</html>

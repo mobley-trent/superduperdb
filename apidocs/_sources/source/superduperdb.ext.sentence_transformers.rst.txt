@@ -1,0 +1,21 @@
+superduperdb.ext.sentence\_transformers package
+===============================================
+
+Submodules
+----------
+
+superduperdb.ext.sentence\_transformers.model module
+----------------------------------------------------
+
+.. automodule:: superduperdb.ext.sentence_transformers.model
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: superduperdb.ext.sentence_transformers
+   :members:
+   :undoc-members:
+   :show-inheritance:

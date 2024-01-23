@@ -1,0 +1,29 @@
+superduperdb.cdc package
+========================
+
+Submodules
+----------
+
+superduperdb.cdc.app module
+---------------------------
+
+.. automodule:: superduperdb.cdc.app
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+superduperdb.cdc.cdc module
+---------------------------
+
+.. automodule:: superduperdb.cdc.cdc
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: superduperdb.cdc
+   :members:
+   :undoc-members:
+   :show-inheritance:

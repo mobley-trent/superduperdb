@@ -1,0 +1,34 @@
+superduperdb.backends package
+=============================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   superduperdb.backends.base
+   superduperdb.backends.dask
+   superduperdb.backends.ibis
+   superduperdb.backends.local
+   superduperdb.backends.mongodb
+   superduperdb.backends.ray
+
+Submodules
+----------
+
+superduperdb.backends.query\_dataset module
+-------------------------------------------
+
+.. automodule:: superduperdb.backends.query_dataset
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: superduperdb.backends
+   :members:
+   :undoc-members:
+   :show-inheritance:

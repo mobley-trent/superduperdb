@@ -1,0 +1,29 @@
+superduperdb.vector\_search.server package
+==========================================
+
+Submodules
+----------
+
+superduperdb.vector\_search.server.app module
+---------------------------------------------
+
+.. automodule:: superduperdb.vector_search.server.app
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+superduperdb.vector\_search.server.service module
+-------------------------------------------------
+
+.. automodule:: superduperdb.vector_search.server.service
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: superduperdb.vector_search.server
+   :members:
+   :undoc-members:
+   :show-inheritance:

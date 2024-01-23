@@ -1,0 +1,21 @@
+superduperdb.backends.ray package
+=================================
+
+Submodules
+----------
+
+superduperdb.backends.ray.compute module
+----------------------------------------
+
+.. automodule:: superduperdb.backends.ray.compute
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: superduperdb.backends.ray
+   :members:
+   :undoc-members:
+   :show-inheritance:

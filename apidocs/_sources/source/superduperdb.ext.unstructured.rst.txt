@@ -1,0 +1,21 @@
+superduperdb.ext.unstructured package
+=====================================
+
+Submodules
+----------
+
+superduperdb.ext.unstructured.encoder module
+--------------------------------------------
+
+.. automodule:: superduperdb.ext.unstructured.encoder
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: superduperdb.ext.unstructured
+   :members:
+   :undoc-members:
+   :show-inheritance:

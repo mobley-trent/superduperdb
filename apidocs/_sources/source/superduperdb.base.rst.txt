@@ -4,14 +4,6 @@ superduperdb.base package
 Submodules
 ----------
 
-superduperdb.base.artifact module
----------------------------------
-
-.. automodule:: superduperdb.base.artifact
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 superduperdb.base.build module
 ------------------------------
 
@@ -76,10 +68,10 @@ superduperdb.base.exceptions module
    :undoc-members:
    :show-inheritance:
 
-superduperdb.base.jsonable module
----------------------------------
+superduperdb.base.leaf module
+-----------------------------
 
-.. automodule:: superduperdb.base.jsonable
+.. automodule:: superduperdb.base.leaf
    :members:
    :undoc-members:
    :show-inheritance:

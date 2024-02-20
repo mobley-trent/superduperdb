@@ -20,10 +20,10 @@ superduperdb.components.dataset module
    :undoc-members:
    :show-inheritance:
 
-superduperdb.components.encoder module
---------------------------------------
+superduperdb.components.datatype module
+---------------------------------------
 
-.. automodule:: superduperdb.components.encoder
+.. automodule:: superduperdb.components.datatype
    :members:
    :undoc-members:
    :show-inheritance:
@@ -56,14 +56,6 @@ superduperdb.components.schema module
 -------------------------------------
 
 .. automodule:: superduperdb.components.schema
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-superduperdb.components.serializer module
------------------------------------------
-
-.. automodule:: superduperdb.components.serializer
    :members:
    :undoc-members:
    :show-inheritance:

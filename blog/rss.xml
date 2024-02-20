@@ -4,7 +4,7 @@
         <title>SuperDuperDB documentation Blog</title>
         <link>https://docs.superduperdb.com/blog</link>
         <description>SuperDuperDB documentation Blog</description>
-        <lastBuildDate>Tue, 23 Jan 2024 03:27:24 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 20 Feb 2024 13:07:54 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -12,7 +12,7 @@
             <title><![CDATA[Integrating AI directly with your databases to eliminate complex MLOps and vector databases]]></title>
             <link>https://docs.superduperdb.com/blog/superduperdb-the-open-source-framework-for-bringing-ai-to-your-datastore</link>
             <guid>https://docs.superduperdb.com/blog/superduperdb-the-open-source-framework-for-bringing-ai-to-your-datastore</guid>
-            <pubDate>Tue, 23 Jan 2024 03:27:24 GMT</pubDate>
+            <pubDate>Tue, 20 Feb 2024 13:07:54 GMT</pubDate>
             <description><![CDATA[🔮TL;DR: We introduce SuperDuperDB, which has just published its first major v0.1 release. SuperDuperDB is an open-source AI development and deployment framework to seamlessly integrate AI models and APIs with your database. In the following, we will survey the challenges presented by current AI-data integration methods and tools, and how they motivated us in developing SuperDuperDB. We'll then provide an overview of SuperDuperDB, highlighting its core principles, features and existing integrations.]]></description>
             <content:encoded><![CDATA[<p>🔮<strong>TL;DR:</strong> <em>We introduce SuperDuperDB, which has just published its first major v0.1 release. SuperDuperDB is an open-source AI development and deployment framework to seamlessly integrate AI models and APIs with your database. In the following, we will survey the challenges presented by current AI-data integration methods and tools, and how they motivated us in developing SuperDuperDB. We'll then provide an overview of SuperDuperDB, highlighting its core principles, features and existing integrations.</em></p>
 <p><img loading="lazy" src="https://docs.superduperdb.com/assets/images/introduction-f2259c890caf36de8e385087977e4abd.png" width="2000" height="969" class="img_ev3q"></p>

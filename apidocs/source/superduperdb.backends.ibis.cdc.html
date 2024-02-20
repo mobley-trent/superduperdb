@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="superduperdb.backends.local package" href="superduperdb.backends.local.html" /><link rel="prev" title="superduperdb.backends.ibis package" href="superduperdb.backends.ibis.html" />
 
-    <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
+    <!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
         <title>superduperdb.backends.ibis.cdc package - Python documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
@@ -246,207 +246,14 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">#</a></h2>
 </section>
-<section id="module-superduperdb.backends.ibis.cdc.base">
-<span id="superduperdb-backends-ibis-cdc-base-module"></span><h2>superduperdb.backends.ibis.cdc.base module<a class="headerlink" href="#module-superduperdb.backends.ibis.cdc.base" title="Link to this heading">#</a></h2>
-<dl class="py class">
-<dt class="sig sig-object py" id="superduperdb.backends.ibis.cdc.base.IbisDBPacket">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">superduperdb.backends.ibis.cdc.base.</span></span><span class="sig-name descname"><span class="pre">IbisDBPacket</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="superduperdb.base.html#superduperdb.base.serializable.Serializable" title="superduperdb.base.serializable.Serializable"><span class="pre">Serializable</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="superduperdb.cdc.html#superduperdb.cdc.cdc.DBEvent" title="superduperdb.cdc.cdc.DBEvent"><span class="pre">DBEvent</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">DBEvent.insert</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/superduperdb/backends/ibis/cdc/base.html#IbisDBPacket"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#superduperdb.backends.ibis.cdc.base.IbisDBPacket" title="Link to this definition">#</a></dt>
-<dd><p>Bases: <a class="reference internal" href="superduperdb.cdc.html#superduperdb.cdc.cdc.Packet" title="superduperdb.cdc.cdc.Packet"><code class="xref py py-class docutils literal notranslate"><span class="pre">Packet</span></code></a></p>
-<p>A base packet to represent message in task queue.</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="superduperdb.backends.ibis.cdc.base.IbisDBPacket.event_type">
-<span class="sig-name descname"><span class="pre">event_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="superduperdb.cdc.html#superduperdb.cdc.cdc.DBEvent" title="superduperdb.cdc.cdc.DBEvent"><span class="pre">DBEvent</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'insert'</span></em><a class="headerlink" href="#superduperdb.backends.ibis.cdc.base.IbisDBPacket.event_type" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="superduperdb.backends.ibis.cdc.base.IbisDBPacket.ids">
-<span class="sig-name descname"><span class="pre">ids</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#superduperdb.backends.ibis.cdc.base.IbisDBPacket.ids" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="superduperdb.backends.ibis.cdc.base.IbisDBPacket.query">
-<span class="sig-name descname"><span class="pre">query</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="superduperdb.base.html#superduperdb.base.serializable.Serializable" title="superduperdb.base.serializable.Serializable"><span class="pre">Serializable</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#superduperdb.backends.ibis.cdc.base.IbisDBPacket.query" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
+<section id="superduperdb-backends-ibis-cdc-base-module">
+<h2>superduperdb.backends.ibis.cdc.base module<a class="headerlink" href="#superduperdb-backends-ibis-cdc-base-module" title="Link to this heading">#</a></h2>
 </section>
-<section id="module-superduperdb.backends.ibis.cdc.listener">
-<span id="superduperdb-backends-ibis-cdc-listener-module"></span><h2>superduperdb.backends.ibis.cdc.listener module<a class="headerlink" href="#module-superduperdb.backends.ibis.cdc.listener" title="Link to this heading">#</a></h2>
-<dl class="py class">
-<dt class="sig sig-object py" id="superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">superduperdb.backends.ibis.cdc.listener.</span></span><span class="sig-name descname"><span class="pre">IbisDatabaseListener</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="superduperdb.base.html#superduperdb.base.datalayer.Datalayer" title="superduperdb.base.datalayer.Datalayer"><span class="pre">Datalayer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">on</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="superduperdb.backends.ibis.html#superduperdb.backends.ibis.query.Table" title="superduperdb.backends.ibis.query.Table"><span class="pre">Table</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop_event</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="superduperdb.misc.runnable.html#superduperdb.misc.runnable.runnable.Event" title="superduperdb.misc.runnable.runnable.Event"><span class="pre">Event</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">identifier</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strategy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="superduperdb.base.html#superduperdb.base.config.PollingStrategy" title="superduperdb.base.config.PollingStrategy"><span class="pre">PollingStrategy</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="superduperdb.base.html#superduperdb.base.config.LogBasedStrategy" title="superduperdb.base.config.LogBasedStrategy"><span class="pre">LogBasedStrategy</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/superduperdb/backends/ibis/cdc/listener.html#IbisDatabaseListener"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener" title="Link to this definition">#</a></dt>
-<dd><p>Bases: <a class="reference internal" href="superduperdb.cdc.html#superduperdb.cdc.cdc.BaseDatabaseListener" title="superduperdb.cdc.cdc.BaseDatabaseListener"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDatabaseListener</span></code></a></p>
-<p>It is a class which helps capture data from ibis database and handle it
-accordingly.</p>
-<p>This class accepts options and db instance from user and starts a scheduler
-which could schedule a listening service to listen change stream.</p>
-<p>This class builds a workflow graph on each change observed.</p>
-<p>__init__.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>db</strong> – It is a superduperdb instance.</p></li>
-<li><p><strong>on</strong> – It is used to define a Collection on which CDC would be performed.</p></li>
-<li><p><strong>stop_event</strong> – A threading event flag to notify for stoppage.</p></li>
-<li><p><strong>identifier</strong> – A identifier to represent the listener service.</p></li>
-<li><p><strong>strategy</strong> – <p>Used to select strategy used for listening changes
-options:</p>
-<blockquote>
-<div><dl class="simple">
-<dt>PollingStrategy (This strategy polls table every</dt><dd><p><cite>frequency</cite> seconds, more info at
-superduperdb.cdc.cdc.PollingStrategy)</p>
-</dd>
-</dl>
-<p>LogBasedStrategy (Not implemented yet)</p>
-</div></blockquote>
-</p></li>
-</ul>
-</dd>
-</dl>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener.DEFAULT_ID">
-<span class="sig-name descname"><span class="pre">DEFAULT_ID</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'id'</span></em><a class="headerlink" href="#superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener.DEFAULT_ID" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener.EXCLUSION_KEYS">
-<span class="sig-name descname"><span class="pre">EXCLUSION_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['id']</span></em><a class="headerlink" href="#superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener.EXCLUSION_KEYS" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener.IDENTITY_SEP">
-<span class="sig-name descname"><span class="pre">IDENTITY_SEP</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/'</span></em><a class="headerlink" href="#superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener.IDENTITY_SEP" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="superduperdb.base.html#superduperdb.base.datalayer.Datalayer" title="superduperdb.base.datalayer.Datalayer"><span class="pre">Datalayer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">on</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="superduperdb.backends.ibis.html#superduperdb.backends.ibis.query.Table" title="superduperdb.backends.ibis.query.Table"><span class="pre">Table</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop_event</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="superduperdb.misc.runnable.html#superduperdb.misc.runnable.runnable.Event" title="superduperdb.misc.runnable.runnable.Event"><span class="pre">Event</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">identifier</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strategy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="superduperdb.base.html#superduperdb.base.config.PollingStrategy" title="superduperdb.base.config.PollingStrategy"><span class="pre">PollingStrategy</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="superduperdb.base.html#superduperdb.base.config.LogBasedStrategy" title="superduperdb.base.config.LogBasedStrategy"><span class="pre">LogBasedStrategy</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/superduperdb/backends/ibis/cdc/listener.html#IbisDatabaseListener.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener.__init__" title="Link to this definition">#</a></dt>
-<dd><p>__init__.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>db</strong> – It is a superduperdb instance.</p></li>
-<li><p><strong>on</strong> – It is used to define a Collection on which CDC would be performed.</p></li>
-<li><p><strong>stop_event</strong> – A threading event flag to notify for stoppage.</p></li>
-<li><p><strong>identifier</strong> – A identifier to represent the listener service.</p></li>
-<li><p><strong>strategy</strong> – <p>Used to select strategy used for listening changes
-options:</p>
-<blockquote>
-<div><dl class="simple">
-<dt>PollingStrategy (This strategy polls table every</dt><dd><p><cite>frequency</cite> seconds, more info at
-superduperdb.cdc.cdc.PollingStrategy)</p>
-</dd>
-</dl>
-<p>LogBasedStrategy (Not implemented yet)</p>
-</div></blockquote>
-</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener.listen">
-<span class="sig-name descname"><span class="pre">listen</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/superduperdb/backends/ibis/cdc/listener.html#IbisDatabaseListener.listen"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener.listen" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener.next_cdc">
-<span class="sig-name descname"><span class="pre">next_cdc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/superduperdb/backends/ibis/cdc/listener.html#IbisDatabaseListener.next_cdc"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener.next_cdc" title="Link to this definition">#</a></dt>
-<dd><p>Get the next stream of change observed on the given <cite>Collection</cite>.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener.on_create">
-<span class="sig-name descname"><span class="pre">on_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="superduperdb.base.html#superduperdb.base.datalayer.Datalayer" title="superduperdb.base.datalayer.Datalayer"><span class="pre">Datalayer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="superduperdb.backends.ibis.html#superduperdb.backends.ibis.query.Table" title="superduperdb.backends.ibis.query.Table"><span class="pre">Table</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/superduperdb/backends/ibis/cdc/listener.html#IbisDatabaseListener.on_create"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener.on_create" title="Link to this definition">#</a></dt>
-<dd><p>on_create.
-A helper on create event handler which handles inserted document in the
-change stream.
-It basically extracts the change document and build the taskflow graph to
-execute.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>ids</strong> – Changed row ids.</p></li>
-<li><p><strong>db</strong> – a superduperdb instance.</p></li>
-<li><p><strong>table</strong> – The table on which change was observed.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener.on_delete">
-<span class="sig-name descname"><span class="pre">on_delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="superduperdb.base.html#superduperdb.base.datalayer.Datalayer" title="superduperdb.base.datalayer.Datalayer"><span class="pre">Datalayer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="superduperdb.backends.ibis.html#superduperdb.backends.ibis.query.Table" title="superduperdb.backends.ibis.query.Table"><span class="pre">Table</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/superduperdb/backends/ibis/cdc/listener.html#IbisDatabaseListener.on_delete"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener.on_delete" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener.on_update">
-<span class="sig-name descname"><span class="pre">on_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="superduperdb.base.html#superduperdb.base.datalayer.Datalayer" title="superduperdb.base.datalayer.Datalayer"><span class="pre">Datalayer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="superduperdb.backends.ibis.html#superduperdb.backends.ibis.query.Table" title="superduperdb.backends.ibis.query.Table"><span class="pre">Table</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/superduperdb/backends/ibis/cdc/listener.html#IbisDatabaseListener.on_update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener.on_update" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener.running">
-<span class="sig-name descname"><span class="pre">running</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="../_modules/superduperdb/backends/ibis/cdc/listener.html#IbisDatabaseListener.running"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener.running" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener.setup_cdc">
-<span class="sig-name descname"><span class="pre">setup_cdc</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/superduperdb/backends/ibis/cdc/listener.html#IbisDatabaseListener.setup_cdc"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener.setup_cdc" title="Link to this definition">#</a></dt>
-<dd><p>Setup cdc change stream from user provided</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener.stop">
-<span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/superduperdb/backends/ibis/cdc/listener.html#IbisDatabaseListener.stop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener.stop" title="Link to this definition">#</a></dt>
-<dd><p>Stop listening cdc changes.
-This stops the corresponding services as well.</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="superduperdb.backends.ibis.cdc.listener.PollingStrategyIbis">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">superduperdb.backends.ibis.cdc.listener.</span></span><span class="sig-name descname"><span class="pre">PollingStrategyIbis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="superduperdb.base.html#superduperdb.base.datalayer.Datalayer" title="superduperdb.base.datalayer.Datalayer"><span class="pre">Datalayer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="superduperdb.backends.ibis.html#superduperdb.backends.ibis.query.Table" title="superduperdb.backends.ibis.query.Table"><span class="pre">Table</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">strategy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">primary_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'id'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/superduperdb/backends/ibis/cdc/listener.html#PollingStrategyIbis"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#superduperdb.backends.ibis.cdc.listener.PollingStrategyIbis" title="Link to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="py method">
-<dt class="sig sig-object py" id="superduperdb.backends.ibis.cdc.listener.PollingStrategyIbis.fetch_ids">
-<span class="sig-name descname"><span class="pre">fetch_ids</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/superduperdb/backends/ibis/cdc/listener.html#PollingStrategyIbis.fetch_ids"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#superduperdb.backends.ibis.cdc.listener.PollingStrategyIbis.fetch_ids" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="superduperdb.backends.ibis.cdc.listener.PollingStrategyIbis.get_strategy">
-<span class="sig-name descname"><span class="pre">get_strategy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/superduperdb/backends/ibis/cdc/listener.html#PollingStrategyIbis.get_strategy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#superduperdb.backends.ibis.cdc.listener.PollingStrategyIbis.get_strategy" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="superduperdb.backends.ibis.cdc.listener.PollingStrategyIbis.post_handling">
-<span class="sig-name descname"><span class="pre">post_handling</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/superduperdb/backends/ibis/cdc/listener.html#PollingStrategyIbis.post_handling"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#superduperdb.backends.ibis.cdc.listener.PollingStrategyIbis.post_handling" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="superduperdb.backends.ibis.cdc.listener.PollingStrategyIbisByID">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">superduperdb.backends.ibis.cdc.listener.</span></span><span class="sig-name descname"><span class="pre">PollingStrategyIbisByID</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="superduperdb.base.html#superduperdb.base.datalayer.Datalayer" title="superduperdb.base.datalayer.Datalayer"><span class="pre">Datalayer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="superduperdb.backends.ibis.html#superduperdb.backends.ibis.query.Table" title="superduperdb.backends.ibis.query.Table"><span class="pre">Table</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">strategy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">primary_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'id'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/superduperdb/backends/ibis/cdc/listener.html#PollingStrategyIbisByID"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#superduperdb.backends.ibis.cdc.listener.PollingStrategyIbisByID" title="Link to this definition">#</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#superduperdb.backends.ibis.cdc.listener.PollingStrategyIbis" title="superduperdb.backends.ibis.cdc.listener.PollingStrategyIbis"><code class="xref py py-class docutils literal notranslate"><span class="pre">PollingStrategyIbis</span></code></a></p>
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="superduperdb.backends.ibis.cdc.listener.PollingStrategyIbisByIncrement">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">superduperdb.backends.ibis.cdc.listener.</span></span><span class="sig-name descname"><span class="pre">PollingStrategyIbisByIncrement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="superduperdb.base.html#superduperdb.base.datalayer.Datalayer" title="superduperdb.base.datalayer.Datalayer"><span class="pre">Datalayer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="superduperdb.backends.ibis.html#superduperdb.backends.ibis.query.Table" title="superduperdb.backends.ibis.query.Table"><span class="pre">Table</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">strategy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">primary_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'id'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/superduperdb/backends/ibis/cdc/listener.html#PollingStrategyIbisByIncrement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#superduperdb.backends.ibis.cdc.listener.PollingStrategyIbisByIncrement" title="Link to this definition">#</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#superduperdb.backends.ibis.cdc.listener.PollingStrategyIbis" title="superduperdb.backends.ibis.cdc.listener.PollingStrategyIbis"><code class="xref py py-class docutils literal notranslate"><span class="pre">PollingStrategyIbis</span></code></a></p>
-<dl class="py method">
-<dt class="sig sig-object py" id="superduperdb.backends.ibis.cdc.listener.PollingStrategyIbisByIncrement.fetch_ids">
-<span class="sig-name descname"><span class="pre">fetch_ids</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/superduperdb/backends/ibis/cdc/listener.html#PollingStrategyIbisByIncrement.fetch_ids"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#superduperdb.backends.ibis.cdc.listener.PollingStrategyIbisByIncrement.fetch_ids" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
+<section id="superduperdb-backends-ibis-cdc-listener-module">
+<h2>superduperdb.backends.ibis.cdc.listener module<a class="headerlink" href="#superduperdb-backends-ibis-cdc-listener-module" title="Link to this heading">#</a></h2>
 </section>
-<section id="module-superduperdb.backends.ibis.cdc">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-superduperdb.backends.ibis.cdc" title="Link to this heading">#</a></h2>
+<section id="module-contents">
+<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading">#</a></h2>
 </section>
 </section>
 
@@ -507,45 +314,9 @@ This stops the corresponding services as well.</p>
             <ul>
 <li><a class="reference internal" href="#">superduperdb.backends.ibis.cdc package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-superduperdb.backends.ibis.cdc.base">superduperdb.backends.ibis.cdc.base module</a><ul>
-<li><a class="reference internal" href="#superduperdb.backends.ibis.cdc.base.IbisDBPacket"><code class="docutils literal notranslate"><span class="pre">IbisDBPacket</span></code></a><ul>
-<li><a class="reference internal" href="#superduperdb.backends.ibis.cdc.base.IbisDBPacket.event_type"><code class="docutils literal notranslate"><span class="pre">IbisDBPacket.event_type</span></code></a></li>
-<li><a class="reference internal" href="#superduperdb.backends.ibis.cdc.base.IbisDBPacket.ids"><code class="docutils literal notranslate"><span class="pre">IbisDBPacket.ids</span></code></a></li>
-<li><a class="reference internal" href="#superduperdb.backends.ibis.cdc.base.IbisDBPacket.query"><code class="docutils literal notranslate"><span class="pre">IbisDBPacket.query</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-superduperdb.backends.ibis.cdc.listener">superduperdb.backends.ibis.cdc.listener module</a><ul>
-<li><a class="reference internal" href="#superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener"><code class="docutils literal notranslate"><span class="pre">IbisDatabaseListener</span></code></a><ul>
-<li><a class="reference internal" href="#superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener.DEFAULT_ID"><code class="docutils literal notranslate"><span class="pre">IbisDatabaseListener.DEFAULT_ID</span></code></a></li>
-<li><a class="reference internal" href="#superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener.EXCLUSION_KEYS"><code class="docutils literal notranslate"><span class="pre">IbisDatabaseListener.EXCLUSION_KEYS</span></code></a></li>
-<li><a class="reference internal" href="#superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener.IDENTITY_SEP"><code class="docutils literal notranslate"><span class="pre">IbisDatabaseListener.IDENTITY_SEP</span></code></a></li>
-<li><a class="reference internal" href="#superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener.__init__"><code class="docutils literal notranslate"><span class="pre">IbisDatabaseListener.__init__()</span></code></a></li>
-<li><a class="reference internal" href="#superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener.listen"><code class="docutils literal notranslate"><span class="pre">IbisDatabaseListener.listen()</span></code></a></li>
-<li><a class="reference internal" href="#superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener.next_cdc"><code class="docutils literal notranslate"><span class="pre">IbisDatabaseListener.next_cdc()</span></code></a></li>
-<li><a class="reference internal" href="#superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener.on_create"><code class="docutils literal notranslate"><span class="pre">IbisDatabaseListener.on_create()</span></code></a></li>
-<li><a class="reference internal" href="#superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener.on_delete"><code class="docutils literal notranslate"><span class="pre">IbisDatabaseListener.on_delete()</span></code></a></li>
-<li><a class="reference internal" href="#superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener.on_update"><code class="docutils literal notranslate"><span class="pre">IbisDatabaseListener.on_update()</span></code></a></li>
-<li><a class="reference internal" href="#superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener.running"><code class="docutils literal notranslate"><span class="pre">IbisDatabaseListener.running()</span></code></a></li>
-<li><a class="reference internal" href="#superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener.setup_cdc"><code class="docutils literal notranslate"><span class="pre">IbisDatabaseListener.setup_cdc()</span></code></a></li>
-<li><a class="reference internal" href="#superduperdb.backends.ibis.cdc.listener.IbisDatabaseListener.stop"><code class="docutils literal notranslate"><span class="pre">IbisDatabaseListener.stop()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#superduperdb.backends.ibis.cdc.listener.PollingStrategyIbis"><code class="docutils literal notranslate"><span class="pre">PollingStrategyIbis</span></code></a><ul>
-<li><a class="reference internal" href="#superduperdb.backends.ibis.cdc.listener.PollingStrategyIbis.fetch_ids"><code class="docutils literal notranslate"><span class="pre">PollingStrategyIbis.fetch_ids()</span></code></a></li>
-<li><a class="reference internal" href="#superduperdb.backends.ibis.cdc.listener.PollingStrategyIbis.get_strategy"><code class="docutils literal notranslate"><span class="pre">PollingStrategyIbis.get_strategy()</span></code></a></li>
-<li><a class="reference internal" href="#superduperdb.backends.ibis.cdc.listener.PollingStrategyIbis.post_handling"><code class="docutils literal notranslate"><span class="pre">PollingStrategyIbis.post_handling()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#superduperdb.backends.ibis.cdc.listener.PollingStrategyIbisByID"><code class="docutils literal notranslate"><span class="pre">PollingStrategyIbisByID</span></code></a></li>
-<li><a class="reference internal" href="#superduperdb.backends.ibis.cdc.listener.PollingStrategyIbisByIncrement"><code class="docutils literal notranslate"><span class="pre">PollingStrategyIbisByIncrement</span></code></a><ul>
-<li><a class="reference internal" href="#superduperdb.backends.ibis.cdc.listener.PollingStrategyIbisByIncrement.fetch_ids"><code class="docutils literal notranslate"><span class="pre">PollingStrategyIbisByIncrement.fetch_ids()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-superduperdb.backends.ibis.cdc">Module contents</a></li>
+<li><a class="reference internal" href="#superduperdb-backends-ibis-cdc-base-module">superduperdb.backends.ibis.cdc.base module</a></li>
+<li><a class="reference internal" href="#superduperdb-backends-ibis-cdc-listener-module">superduperdb.backends.ibis.cdc.listener module</a></li>
+<li><a class="reference internal" href="#module-contents">Module contents</a></li>
 </ul>
 </li>
 </ul>

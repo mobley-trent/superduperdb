@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunknewdocs=self.webpackChunknewdocs||[]).push([[1092],{93776:e=>{e.exports=JSON.parse('{"title":"Setup","description":"Detailed setup","slug":"/category/setup","permalink":"/docs/category/setup","navigation":{"previous":{"title":"FAQ","permalink":"/docs/docs/faq"},"next":{"title":"Configure","permalink":"/docs/docs/setup/configuration"}}}')}}]);

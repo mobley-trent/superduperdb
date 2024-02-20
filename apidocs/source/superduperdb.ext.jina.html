@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="superduperdb.ext.llm package" href="superduperdb.ext.llm.html" /><link rel="prev" title="superduperdb.ext.cohere package" href="superduperdb.ext.cohere.html" />
 
-    <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
+    <!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
         <title>superduperdb.ext.jina package - Python documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
@@ -246,145 +246,14 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">#</a></h2>
 </section>
-<section id="module-superduperdb.ext.jina.client">
-<span id="superduperdb-ext-jina-client-module"></span><h2>superduperdb.ext.jina.client module<a class="headerlink" href="#module-superduperdb.ext.jina.client" title="Link to this heading">#</a></h2>
-<dl class="py class">
-<dt class="sig sig-object py" id="superduperdb.ext.jina.client.JinaAPIClient">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">superduperdb.ext.jina.client.</span></span><span class="sig-name descname"><span class="pre">JinaAPIClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'jina-embeddings-v2-base-en'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/superduperdb/ext/jina/client.html#JinaAPIClient"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#superduperdb.ext.jina.client.JinaAPIClient" title="Link to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="simple">
-<dt>Create a JinaAPIClient to provide an interface to encode using</dt><dd><p>Jina Embedding platform sync and async.</p>
-</dd>
-</dl>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>api_key</strong> – The Jina API key.
-It can be explicitly provided or automatically read
-from the environment variable JINA_API_KEY (recommended).</p></li>
-<li><p><strong>model_name</strong> – The name of the Jina model to use.
-Check the list of available models on <cite>https://jina.ai/embeddings/</cite></p></li>
-</ul>
-</dd>
-</dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="superduperdb.ext.jina.client.JinaAPIClient.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'jina-embeddings-v2-base-en'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/superduperdb/ext/jina/client.html#JinaAPIClient.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#superduperdb.ext.jina.client.JinaAPIClient.__init__" title="Link to this definition">#</a></dt>
-<dd><dl class="simple">
-<dt>Create a JinaAPIClient to provide an interface to encode using</dt><dd><p>Jina Embedding platform sync and async.</p>
-</dd>
-</dl>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>api_key</strong> – The Jina API key.
-It can be explicitly provided or automatically read
-from the environment variable JINA_API_KEY (recommended).</p></li>
-<li><p><strong>model_name</strong> – The name of the Jina model to use.
-Check the list of available models on <cite>https://jina.ai/embeddings/</cite></p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="superduperdb.ext.jina.client.JinaAPIClient.aencode_batch">
-<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">aencode_batch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/superduperdb/ext/jina/client.html#JinaAPIClient.aencode_batch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#superduperdb.ext.jina.client.JinaAPIClient.aencode_batch" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="superduperdb.ext.jina.client.JinaAPIClient.encode_batch">
-<span class="sig-name descname"><span class="pre">encode_batch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/superduperdb/ext/jina/client.html#JinaAPIClient.encode_batch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#superduperdb.ext.jina.client.JinaAPIClient.encode_batch" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
+<section id="superduperdb-ext-jina-client-module">
+<h2>superduperdb.ext.jina.client module<a class="headerlink" href="#superduperdb-ext-jina-client-module" title="Link to this heading">#</a></h2>
 </section>
-<section id="module-superduperdb.ext.jina.model">
-<span id="superduperdb-ext-jina-model-module"></span><h2>superduperdb.ext.jina.model module<a class="headerlink" href="#module-superduperdb.ext.jina.model" title="Link to this heading">#</a></h2>
-<dl class="py class">
-<dt class="sig sig-object py" id="superduperdb.ext.jina.model.Jina">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">superduperdb.ext.jina.model.</span></span><span class="sig-name descname"><span class="pre">Jina</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoder:</span> <span class="pre">EncoderArg</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_schema:</span> <span class="pre">t.Optional[t.Union[Schema</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dict]]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flatten:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preprocess:</span> <span class="pre">t.Union[t.Callable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Artifact</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">None]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">postprocess:</span> <span class="pre">t.Union[t.Callable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Artifact</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">None]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collate_fn:</span> <span class="pre">t.Union[t.Callable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Artifact</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">None]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_predict:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">takes_context:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metrics:</span> <span class="pre">t.Sequence[t.Union[str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Metric</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">None]]</span> <span class="pre">=</span> <span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_update_kwargs:</span> <span class="pre">t.Dict</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">validation_sets:</span> <span class="pre">t.Optional[t.Sequence[t.Union[str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Dataset]]]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">predict_X:</span> <span class="pre">t.Optional[str]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">predict_select:</span> <span class="pre">t.Optional[CompoundSelect]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">predict_max_chunk_size:</span> <span class="pre">t.Optional[int]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">predict_kwargs:</span> <span class="pre">t.Optional[t.Dict]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model:</span> <span class="pre">t.Optional[str]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_key:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/superduperdb/ext/jina/model.html#Jina"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#superduperdb.ext.jina.model.Jina" title="Link to this definition">#</a></dt>
-<dd><p>Bases: <a class="reference internal" href="superduperdb.components.html#superduperdb.components.model.APIModel" title="superduperdb.components.model.APIModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">APIModel</span></code></a></p>
-<p>Cohere predictor</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="superduperdb.ext.jina.model.Jina.api_key">
-<span class="sig-name descname"><span class="pre">api_key</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#superduperdb.ext.jina.model.Jina.api_key" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="superduperdb.ext.jina.model.JinaEmbedding">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">superduperdb.ext.jina.model.</span></span><span class="sig-name descname"><span class="pre">JinaEmbedding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoder:</span> <span class="pre">EncoderArg</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_schema:</span> <span class="pre">t.Optional[t.Union[Schema</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dict]]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flatten:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preprocess:</span> <span class="pre">t.Union[t.Callable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Artifact</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">None]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">postprocess:</span> <span class="pre">t.Union[t.Callable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Artifact</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">None]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collate_fn:</span> <span class="pre">t.Union[t.Callable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Artifact</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">None]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_predict:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">takes_context:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metrics:</span> <span class="pre">t.Sequence[t.Union[str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Metric</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">None]]</span> <span class="pre">=</span> <span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_update_kwargs:</span> <span class="pre">t.Dict</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">validation_sets:</span> <span class="pre">t.Optional[t.Sequence[t.Union[str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Dataset]]]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">predict_X:</span> <span class="pre">t.Optional[str]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">predict_select:</span> <span class="pre">t.Optional[CompoundSelect]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">predict_max_chunk_size:</span> <span class="pre">t.Optional[int]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">predict_kwargs:</span> <span class="pre">t.Optional[t.Dict]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model:</span> <span class="pre">t.Optional[str]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_key:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape:</span> <span class="pre">~typing.Sequence[int]</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/superduperdb/ext/jina/model.html#JinaEmbedding"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#superduperdb.ext.jina.model.JinaEmbedding" title="Link to this definition">#</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#superduperdb.ext.jina.model.Jina" title="superduperdb.ext.jina.model.Jina"><code class="xref py py-class docutils literal notranslate"><span class="pre">Jina</span></code></a></p>
-<p>Jina embedding predictor</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>shape</strong> – The shape of the embedding as <code class="docutils literal notranslate"><span class="pre">tuple</span></code>.
-If not provided, it will be obtained by sending a simple query to the API</p>
-</dd>
-</dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="superduperdb.ext.jina.model.JinaEmbedding.pre_create">
-<span class="sig-name descname"><span class="pre">pre_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/superduperdb/ext/jina/model.html#JinaEmbedding.pre_create"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#superduperdb.ext.jina.model.JinaEmbedding.pre_create" title="Link to this definition">#</a></dt>
-<dd><p>Called the first time this component is created</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>db</strong> – the db that creates the component</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="superduperdb.ext.jina.model.JinaEmbedding.shape">
-<span class="sig-name descname"><span class="pre">shape</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#superduperdb.ext.jina.model.JinaEmbedding.shape" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
+<section id="superduperdb-ext-jina-model-module">
+<h2>superduperdb.ext.jina.model module<a class="headerlink" href="#superduperdb-ext-jina-model-module" title="Link to this heading">#</a></h2>
 </section>
-<section id="module-superduperdb.ext.jina">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-superduperdb.ext.jina" title="Link to this heading">#</a></h2>
-<dl class="py class">
-<dt class="sig sig-object py" id="superduperdb.ext.jina.JinaEmbedding">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">superduperdb.ext.jina.</span></span><span class="sig-name descname"><span class="pre">JinaEmbedding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoder:</span> <span class="pre">EncoderArg</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_schema:</span> <span class="pre">t.Optional[t.Union[Schema</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dict]]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flatten:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preprocess:</span> <span class="pre">t.Union[t.Callable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Artifact</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">None]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">postprocess:</span> <span class="pre">t.Union[t.Callable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Artifact</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">None]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collate_fn:</span> <span class="pre">t.Union[t.Callable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Artifact</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">None]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_predict:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">takes_context:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metrics:</span> <span class="pre">t.Sequence[t.Union[str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Metric</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">None]]</span> <span class="pre">=</span> <span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_update_kwargs:</span> <span class="pre">t.Dict</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">validation_sets:</span> <span class="pre">t.Optional[t.Sequence[t.Union[str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Dataset]]]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">predict_X:</span> <span class="pre">t.Optional[str]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">predict_select:</span> <span class="pre">t.Optional[CompoundSelect]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">predict_max_chunk_size:</span> <span class="pre">t.Optional[int]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">predict_kwargs:</span> <span class="pre">t.Optional[t.Dict]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model:</span> <span class="pre">t.Optional[str]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_key:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape:</span> <span class="pre">~typing.Sequence[int]</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/superduperdb/ext/jina/model.html#JinaEmbedding"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#superduperdb.ext.jina.JinaEmbedding" title="Link to this definition">#</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#superduperdb.ext.jina.model.Jina" title="superduperdb.ext.jina.model.Jina"><code class="xref py py-class docutils literal notranslate"><span class="pre">Jina</span></code></a></p>
-<p>Jina embedding predictor</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>shape</strong> – The shape of the embedding as <code class="docutils literal notranslate"><span class="pre">tuple</span></code>.
-If not provided, it will be obtained by sending a simple query to the API</p>
-</dd>
-</dl>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="superduperdb.ext.jina.JinaEmbedding.identifier">
-<span class="sig-name descname"><span class="pre">identifier</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#superduperdb.ext.jina.JinaEmbedding.identifier" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="superduperdb.ext.jina.JinaEmbedding.model_update_kwargs">
-<span class="sig-name descname"><span class="pre">model_update_kwargs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">t.Dict</span></em><a class="headerlink" href="#superduperdb.ext.jina.JinaEmbedding.model_update_kwargs" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="superduperdb.ext.jina.JinaEmbedding.pre_create">
-<span class="sig-name descname"><span class="pre">pre_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/superduperdb/ext/jina/model.html#JinaEmbedding.pre_create"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#superduperdb.ext.jina.JinaEmbedding.pre_create" title="Link to this definition">#</a></dt>
-<dd><p>Called the first time this component is created</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>db</strong> – the db that creates the component</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="superduperdb.ext.jina.JinaEmbedding.shape">
-<span class="sig-name descname"><span class="pre">shape</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#superduperdb.ext.jina.JinaEmbedding.shape" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
+<section id="module-contents">
+<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading">#</a></h2>
 </section>
 </section>
 
@@ -445,37 +314,9 @@ If not provided, it will be obtained by sending a simple query to the API</p>
             <ul>
 <li><a class="reference internal" href="#">superduperdb.ext.jina package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-superduperdb.ext.jina.client">superduperdb.ext.jina.client module</a><ul>
-<li><a class="reference internal" href="#superduperdb.ext.jina.client.JinaAPIClient"><code class="docutils literal notranslate"><span class="pre">JinaAPIClient</span></code></a><ul>
-<li><a class="reference internal" href="#superduperdb.ext.jina.client.JinaAPIClient.__init__"><code class="docutils literal notranslate"><span class="pre">JinaAPIClient.__init__()</span></code></a></li>
-<li><a class="reference internal" href="#superduperdb.ext.jina.client.JinaAPIClient.aencode_batch"><code class="docutils literal notranslate"><span class="pre">JinaAPIClient.aencode_batch()</span></code></a></li>
-<li><a class="reference internal" href="#superduperdb.ext.jina.client.JinaAPIClient.encode_batch"><code class="docutils literal notranslate"><span class="pre">JinaAPIClient.encode_batch()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-superduperdb.ext.jina.model">superduperdb.ext.jina.model module</a><ul>
-<li><a class="reference internal" href="#superduperdb.ext.jina.model.Jina"><code class="docutils literal notranslate"><span class="pre">Jina</span></code></a><ul>
-<li><a class="reference internal" href="#superduperdb.ext.jina.model.Jina.api_key"><code class="docutils literal notranslate"><span class="pre">Jina.api_key</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#superduperdb.ext.jina.model.JinaEmbedding"><code class="docutils literal notranslate"><span class="pre">JinaEmbedding</span></code></a><ul>
-<li><a class="reference internal" href="#superduperdb.ext.jina.model.JinaEmbedding.pre_create"><code class="docutils literal notranslate"><span class="pre">JinaEmbedding.pre_create()</span></code></a></li>
-<li><a class="reference internal" href="#superduperdb.ext.jina.model.JinaEmbedding.shape"><code class="docutils literal notranslate"><span class="pre">JinaEmbedding.shape</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-superduperdb.ext.jina">Module contents</a><ul>
-<li><a class="reference internal" href="#superduperdb.ext.jina.JinaEmbedding"><code class="docutils literal notranslate"><span class="pre">JinaEmbedding</span></code></a><ul>
-<li><a class="reference internal" href="#superduperdb.ext.jina.JinaEmbedding.identifier"><code class="docutils literal notranslate"><span class="pre">JinaEmbedding.identifier</span></code></a></li>
-<li><a class="reference internal" href="#superduperdb.ext.jina.JinaEmbedding.model_update_kwargs"><code class="docutils literal notranslate"><span class="pre">JinaEmbedding.model_update_kwargs</span></code></a></li>
-<li><a class="reference internal" href="#superduperdb.ext.jina.JinaEmbedding.pre_create"><code class="docutils literal notranslate"><span class="pre">JinaEmbedding.pre_create()</span></code></a></li>
-<li><a class="reference internal" href="#superduperdb.ext.jina.JinaEmbedding.shape"><code class="docutils literal notranslate"><span class="pre">JinaEmbedding.shape</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li><a class="reference internal" href="#superduperdb-ext-jina-client-module">superduperdb.ext.jina.client module</a></li>
+<li><a class="reference internal" href="#superduperdb-ext-jina-model-module">superduperdb.ext.jina.model module</a></li>
+<li><a class="reference internal" href="#module-contents">Module contents</a></li>
 </ul>
 </li>
 </ul>

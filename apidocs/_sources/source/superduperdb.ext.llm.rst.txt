@@ -28,6 +28,14 @@ superduperdb.ext.llm.openai module
    :undoc-members:
    :show-inheritance:
 
+superduperdb.ext.llm.training module
+------------------------------------
+
+.. automodule:: superduperdb.ext.llm.training
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 superduperdb.ext.llm.utils module
 ---------------------------------
 

@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="superduperdb.backends.ibis package" href="superduperdb.backends.ibis.html" /><link rel="prev" title="superduperdb.backends.base package" href="superduperdb.backends.base.html" />
 
-    <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
+    <!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
         <title>superduperdb.backends.dask package - Python documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
@@ -246,96 +246,11 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">#</a></h2>
 </section>
-<section id="module-superduperdb.backends.dask.compute">
-<span id="superduperdb-backends-dask-compute-module"></span><h2>superduperdb.backends.dask.compute module<a class="headerlink" href="#module-superduperdb.backends.dask.compute" title="Link to this heading">#</a></h2>
-<dl class="py class">
-<dt class="sig sig-object py" id="superduperdb.backends.dask.compute.DaskComputeBackend">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">superduperdb.backends.dask.compute.</span></span><span class="sig-name descname"><span class="pre">DaskComputeBackend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">address</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">serializers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deserializers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/superduperdb/backends/dask/compute.html#DaskComputeBackend"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#superduperdb.backends.dask.compute.DaskComputeBackend" title="Link to this definition">#</a></dt>
-<dd><p>Bases: <a class="reference internal" href="superduperdb.backends.base.html#superduperdb.backends.base.compute.ComputeBackend" title="superduperdb.backends.base.compute.ComputeBackend"><code class="xref py py-class docutils literal notranslate"><span class="pre">ComputeBackend</span></code></a></p>
-<p>A client for interacting with a Dask cluster. Initialize the DaskClient.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>address</strong> – The address of the Dask cluster.</p></li>
-<li><p><strong>serializers</strong> – A list of serializers to be used by the client. (optional)</p></li>
-<li><p><strong>deserializers</strong> – A list of deserializers to be used by the client. (optional)</p></li>
-<li><p><strong>local</strong> – Set to True to create a local Dask cluster. (optional)</p></li>
-<li><p><strong>**kwargs</strong> – <p>Additional keyword arguments to be passed to the DaskClient.</p>
-</p></li>
-</ul>
-</dd>
-</dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="superduperdb.backends.dask.compute.DaskComputeBackend.disconnect">
-<span class="sig-name descname"><span class="pre">disconnect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/superduperdb/backends/dask/compute.html#DaskComputeBackend.disconnect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#superduperdb.backends.dask.compute.DaskComputeBackend.disconnect" title="Link to this definition">#</a></dt>
-<dd><p>Disconnect the Dask client.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="superduperdb.backends.dask.compute.DaskComputeBackend.name">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#superduperdb.backends.dask.compute.DaskComputeBackend.name" title="Link to this definition">#</a></dt>
-<dd><p>Return the name of current compute engine</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="superduperdb.backends.dask.compute.DaskComputeBackend.result">
-<span class="sig-name descname"><span class="pre">result</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="reference internal" href="../_modules/superduperdb/backends/dask/compute.html#DaskComputeBackend.result"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#superduperdb.backends.dask.compute.DaskComputeBackend.result" title="Link to this definition">#</a></dt>
-<dd><p>Retrieves the result of a previously submitted task.
-Note: This will block until the future is completed.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>identifier</strong> – The identifier of the submitted task.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="superduperdb.backends.dask.compute.DaskComputeBackend.shutdown">
-<span class="sig-name descname"><span class="pre">shutdown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/superduperdb/backends/dask/compute.html#DaskComputeBackend.shutdown"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#superduperdb.backends.dask.compute.DaskComputeBackend.shutdown" title="Link to this definition">#</a></dt>
-<dd><p>Shuts down the Dask cluster.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="superduperdb.backends.dask.compute.DaskComputeBackend.submit">
-<span class="sig-name descname"><span class="pre">submit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Future</span></span></span><a class="reference internal" href="../_modules/superduperdb/backends/dask/compute.html#DaskComputeBackend.submit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#superduperdb.backends.dask.compute.DaskComputeBackend.submit" title="Link to this definition">#</a></dt>
-<dd><p>Submits a function to the Dask server for execution.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>function</strong> – The function to be executed.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="superduperdb.backends.dask.compute.DaskComputeBackend.tasks">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tasks</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Future</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#superduperdb.backends.dask.compute.DaskComputeBackend.tasks" title="Link to this definition">#</a></dt>
-<dd><p>List for all pending tasks</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="superduperdb.backends.dask.compute.DaskComputeBackend.type">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#superduperdb.backends.dask.compute.DaskComputeBackend.type" title="Link to this definition">#</a></dt>
-<dd><p>Return the type of compute engine</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="superduperdb.backends.dask.compute.DaskComputeBackend.wait">
-<span class="sig-name descname"><span class="pre">wait</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/superduperdb/backends/dask/compute.html#DaskComputeBackend.wait"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#superduperdb.backends.dask.compute.DaskComputeBackend.wait" title="Link to this definition">#</a></dt>
-<dd><p>Waits for all pending tasks to complete.
-:param identifier: Future task reference</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="superduperdb.backends.dask.compute.DaskComputeBackend.wait_all">
-<span class="sig-name descname"><span class="pre">wait_all</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/superduperdb/backends/dask/compute.html#DaskComputeBackend.wait_all"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#superduperdb.backends.dask.compute.DaskComputeBackend.wait_all" title="Link to this definition">#</a></dt>
-<dd><p>Waits for all pending tasks to complete.</p>
-</dd></dl>
-
-</dd></dl>
-
+<section id="superduperdb-backends-dask-compute-module">
+<h2>superduperdb.backends.dask.compute module<a class="headerlink" href="#superduperdb-backends-dask-compute-module" title="Link to this heading">#</a></h2>
 </section>
-<section id="module-superduperdb.backends.dask">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-superduperdb.backends.dask" title="Link to this heading">#</a></h2>
+<section id="module-contents">
+<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading">#</a></h2>
 </section>
 </section>
 
@@ -396,22 +311,8 @@ Note: This will block until the future is completed.</p>
             <ul>
 <li><a class="reference internal" href="#">superduperdb.backends.dask package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-superduperdb.backends.dask.compute">superduperdb.backends.dask.compute module</a><ul>
-<li><a class="reference internal" href="#superduperdb.backends.dask.compute.DaskComputeBackend"><code class="docutils literal notranslate"><span class="pre">DaskComputeBackend</span></code></a><ul>
-<li><a class="reference internal" href="#superduperdb.backends.dask.compute.DaskComputeBackend.disconnect"><code class="docutils literal notranslate"><span class="pre">DaskComputeBackend.disconnect()</span></code></a></li>
-<li><a class="reference internal" href="#superduperdb.backends.dask.compute.DaskComputeBackend.name"><code class="docutils literal notranslate"><span class="pre">DaskComputeBackend.name</span></code></a></li>
-<li><a class="reference internal" href="#superduperdb.backends.dask.compute.DaskComputeBackend.result"><code class="docutils literal notranslate"><span class="pre">DaskComputeBackend.result()</span></code></a></li>
-<li><a class="reference internal" href="#superduperdb.backends.dask.compute.DaskComputeBackend.shutdown"><code class="docutils literal notranslate"><span class="pre">DaskComputeBackend.shutdown()</span></code></a></li>
-<li><a class="reference internal" href="#superduperdb.backends.dask.compute.DaskComputeBackend.submit"><code class="docutils literal notranslate"><span class="pre">DaskComputeBackend.submit()</span></code></a></li>
-<li><a class="reference internal" href="#superduperdb.backends.dask.compute.DaskComputeBackend.tasks"><code class="docutils literal notranslate"><span class="pre">DaskComputeBackend.tasks</span></code></a></li>
-<li><a class="reference internal" href="#superduperdb.backends.dask.compute.DaskComputeBackend.type"><code class="docutils literal notranslate"><span class="pre">DaskComputeBackend.type</span></code></a></li>
-<li><a class="reference internal" href="#superduperdb.backends.dask.compute.DaskComputeBackend.wait"><code class="docutils literal notranslate"><span class="pre">DaskComputeBackend.wait()</span></code></a></li>
-<li><a class="reference internal" href="#superduperdb.backends.dask.compute.DaskComputeBackend.wait_all"><code class="docutils literal notranslate"><span class="pre">DaskComputeBackend.wait_all()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-superduperdb.backends.dask">Module contents</a></li>
+<li><a class="reference internal" href="#superduperdb-backends-dask-compute-module">superduperdb.backends.dask.compute module</a></li>
+<li><a class="reference internal" href="#module-contents">Module contents</a></li>
 </ul>
 </li>
 </ul>
